@@ -15,11 +15,11 @@
 </head>
 <body>
 
-    <main>
-        @yield('content')
-    </main>
+<main>
+    @yield('content')
+</main>
 
 
-    @stack('scripts')
+@stack('scripts')
 </body>
 </html>
