@@ -24,7 +24,3 @@ yarn-error.log
 .htaccess
 package-lock.json
 manifest.json
-/resources/js/ziggy.js
-/bootstrap/ssr/ssr.js
-public/images/examples/
-public/images/resumes/
