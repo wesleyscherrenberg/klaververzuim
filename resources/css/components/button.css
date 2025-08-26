@@ -1,0 +1,116 @@
+@layer components {
+    /* BTN */
+    .btn {
+        @apply
+        relative
+        font-serif
+        inline-flex
+        no-underline
+        text-base
+        items-center
+        gap-1.5
+        h-12
+        px-4
+        border
+        font-medium
+        text-theme-gray-darker
+        focus:outline-none
+        shadow-sm
+        transition-all duration-500
+        hover:no-underline
+    }
+
+    .btn.btn-primary svg,
+    .btn.btn-secondary svg,
+    .btn.btn-danger svg,
+    .btn.btn-success svg {
+        @apply fill-white
+    }
+
+    .btn-xs {
+        @apply px-3 h-11 text-xs
+    }
+
+    .btn-xl {
+        @apply px-5 py-2.5 text-lg
+    }
+
+    .btn.btn-success {
+        @apply text-white bg-theme-success border-theme-success hover:bg-theme-success-darker hover:border-theme-success-darker focus:border-theme-success-darker focus:bg-theme-success-darker
+    }
+
+    .btn.btn-primary {
+        @apply
+        text-white
+        border-theme-primary
+        bg-theme-primary
+        hover:bg-theme-primary-darker
+        focus:border-theme-primary-lighter
+    }
+
+    .btn.btn-secondary {
+        @apply
+        text-white
+        bg-theme-secondary
+        border-theme-secondary
+        hover:bg-theme-secondary-darker
+        hover:border-theme-secondary-darker
+        focus:border-theme-secondary-darker
+        focus:bg-theme-secondary-darker
+    }
+
+    .btn.btn-danger {
+        @apply
+        text-white
+        bg-theme-danger
+        border-theme-danger
+        hover:bg-theme-danger-darker
+        hover:border-theme-danger-darker
+        focus:border-theme-danger-darker
+        focus:bg-theme-danger-darker
+    }
+
+    .btn.btn-white {
+        @apply
+        text-theme-primary
+        bg-white
+        border-theme-primary
+        hover:text-theme-primary-darker
+        hover:border-theme-primary-darker
+        focus:border-theme-primary-darker
+        focus:text-theme-primary-darker
+    }
+
+    .btn.btn-primary .btn-loading,
+    .btn.btn-secondary .btn-loading,
+    .btn.btn-danger .btn-loading
+    {
+        @apply fill-white;
+    }
+
+    /* ACTIVE STATES */
+    .btn.btn-primary.btn-active {
+        @apply bg-theme-primary-darker;
+    }
+
+    .btn.btn-secondary.btn-active {
+        @apply bg-theme-secondary-darker;
+    }
+
+    /*.btn.btn-success.btn-active {*/
+    /*    @apply bg-theme-success-darker;*/
+    /*}*/
+
+    .btn.btn-danger.btn-active {
+        @apply bg-theme-danger-darker;
+    }
+
+    /*.btn.btn-light.btn-active {*/
+    /*    @apply bg-theme-light-darker;*/
+    /*}*/
+
+    .btn.btn-white.btn-active {
+        @apply bg-gray-100;
+    }
+
+}

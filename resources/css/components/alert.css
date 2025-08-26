@@ -1,0 +1,16 @@
+.alert {
+    @apply flex gap-2 items-start font-light text-base bg-gray-100 p-4 border-l-4 border-theme-primary [&>svg]:fill-theme-primary
+    [&>svg]:w-5 [&>svg]:h-5 [&>svg]:flex-none [&>svg]:mt-0.5
+}
+
+.alert-primary {
+    @apply border-theme-primary [&>svg]:fill-theme-primary
+}
+
+.alert-success {
+    @apply text-theme-success border-theme-success [&>svg]:fill-theme-success
+}
+
+.alert-danger {
+    @apply text-theme-danger border-theme-danger [&>svg]:fill-theme-danger
+}
