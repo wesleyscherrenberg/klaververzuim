@@ -6,7 +6,7 @@
     text-theme-gray-darker
 }
 
-.form-control, .pell-editor .pell-content {
+.form-control {
     @apply appearance-none block text-sm w-full h-12 px-4 border
     border-theme-primary bg-white
     focus:border-theme-primary outline-none focus:ring-1 focus:ring-theme-primary
@@ -38,6 +38,10 @@
 
 .feedback {
     @apply mt-1 text-sm text-theme-danger;
+}
+
+textarea.form-control {
+    @apply h-32
 }
 
 /* input date */

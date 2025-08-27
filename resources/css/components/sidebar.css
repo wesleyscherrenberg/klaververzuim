@@ -1,0 +1,7 @@
+.sidebar-link {
+    @apply block rounded px-3 py-2 hover:bg-theme-primary-darker transition-colors no-underline;
+}
+
+.sidebar-link-active {
+    @apply !bg-theme-primary-darker;
+}

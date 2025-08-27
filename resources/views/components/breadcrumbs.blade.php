@@ -2,13 +2,13 @@
 
 <div class="py-4">
     @if (!empty($items))
-        <nav class="container flex" aria-label="Breadcrumb">
+        <nav class="flex" aria-label="Breadcrumb">
             <ol class="inline-flex items-center gap-2 flex-wrap">
                 <!-- Home Link -->
                 <li class="flex items-center">
-                    <a href="{{ route('pages.home') }}" class="text-sm inline-flex items-center gap-2 text-theme-gray font-medium underline">
+                    <a href="{{ route('admin.dashboard.index') }}" class="text-sm inline-flex items-center gap-2 text-theme-gray font-medium underline">
                         <x-icons.home class="w-4 h-4" />
-                        Home
+                        Dashboard
                     </a>
                 </li>
 

@@ -42,8 +42,8 @@ export default {
             },
 
             fontFamily: {
-                serif: ['Montserrat', 'sans-serif'],  // Montserrat voor de koppen en buttons
-                sans: ['SourceSans3', 'serif'], // SourceSans3 voor de body tekst
+                serif: ['Roboto', 'sans-serif'],  // Montserrat voor de koppen en buttons
+                sans: ['Roboto', 'sans-serif'], // SourceSans3 voor de body tekst
             },
             fontSize: {
                 "xs": ["0.875rem", "1.3rem"],  // 14px met ~1.5 line-height
@@ -72,19 +72,19 @@ export default {
             },
             colors: {
                 "theme-primary": {
-                    lighter: "#03856f",
-                    DEFAULT: '#027a66',
-                    darker: "#026a59"
+                    lighter: "#1b1b1e",
+                    DEFAULT: '#18181b',
+                    darker: "#101012"
                 },
                 "theme-secondary": {
-                    lighter: "#77107c",
-                    DEFAULT: '#6b0e6e',
-                    darker: "#4e0950"
+                    lighter: "#5cc4e3",
+                    DEFAULT: '#5bc0de',
+                    darker: "#52aeca"
                 },
                 "theme-success": {
-                    lighter: '#1ca34d',
-                    DEFAULT: '#15803d',
-                    darker: '#126c33'
+                    lighter: '#1eb326',
+                    DEFAULT: '#1ca924',
+                    darker: '#178a1d'
                 },
                 "theme-light": {
                     lighter: '#f7fdfc',
@@ -92,12 +92,12 @@ export default {
                     darker: '#cacdd3'
                 },
                 "theme-danger": {
-                    lighter: '#ef4444',
-                    DEFAULT: '#dc2626',
-                    darker: '#b91c1c',
+                    lighter: '#e43434',
+                    DEFAULT: '#dc3232',
+                    darker: '#c12b2b',
                 },
                 "theme-gray": {
-                    "lightest": "#f3f4f6",
+                    "lightest": "#f7f9f8",
                     "lighter": "#727478",
                     "DEFAULT": "#535357",
                     "darker": "#333"

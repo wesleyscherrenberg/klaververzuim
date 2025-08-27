@@ -9,10 +9,10 @@
         text-base
         items-center
         gap-1.5
-        h-12
+        h-11
         px-4
         border
-        font-medium
+        rounded
         text-theme-gray-darker
         focus:outline-none
         shadow-sm
@@ -50,7 +50,6 @@
 
     .btn.btn-secondary {
         @apply
-        text-white
         bg-theme-secondary
         border-theme-secondary
         hover:bg-theme-secondary-darker
@@ -81,6 +80,16 @@
         focus:text-theme-primary-darker
     }
 
+    .btn.btn-light {
+        @apply
+        bg-theme-light
+        border-theme-light
+        hover:bg-theme-light-darker
+        hover:border-theme-light-darker
+        focus:border-theme-light-darker
+        focus:bg-theme-light-darker
+    }
+
     .btn.btn-primary .btn-loading,
     .btn.btn-secondary .btn-loading,
     .btn.btn-danger .btn-loading
@@ -97,17 +106,9 @@
         @apply bg-theme-secondary-darker;
     }
 
-    /*.btn.btn-success.btn-active {*/
-    /*    @apply bg-theme-success-darker;*/
-    /*}*/
-
     .btn.btn-danger.btn-active {
         @apply bg-theme-danger-darker;
     }
-
-    /*.btn.btn-light.btn-active {*/
-    /*    @apply bg-theme-light-darker;*/
-    /*}*/
 
     .btn.btn-white.btn-active {
         @apply bg-gray-100;

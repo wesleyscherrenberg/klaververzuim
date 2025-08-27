@@ -5,7 +5,7 @@
     'value' => '',
     'placeholder' => '',
     'error' => '',
-    'rows' => '5',
+    'rows' => '10',
     'class' => ''
 ])
 

@@ -5,6 +5,7 @@
 @import 'components/alert.css';
 @import 'components/checklist.css';
 @import 'components/checkbox-switch.css';
+@import 'components/sidebar.css';
 
 @tailwind base;
 @tailwind components;
@@ -18,7 +19,7 @@
 
     /* Body instellingen */
     body {
-        @apply font-sans leading-relaxed text-base text-theme-gray-darker;
+        @apply leading-relaxed text-base;
     }
 
     /* h1 - Grote kop voor hoofdtitels */
@@ -49,6 +50,10 @@
     /* h6 - Nog kleinere koppen */
     h6, .h6 {
         @apply font-serif text-xs-heading-6 xl:text-heading-6 font-bold;
+    }
+
+    a, .link {
+        @apply transition-colors duration-300 underline
     }
 
 
