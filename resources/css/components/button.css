@@ -114,4 +114,11 @@
         @apply bg-gray-100;
     }
 
+    /* DISABLED STATES */
+    .btn:disabled,
+    .btn[disabled] {
+        @apply  text-theme-gray-lighter  cursor-not-allowed opacity-40;
+    }
+
+
 }

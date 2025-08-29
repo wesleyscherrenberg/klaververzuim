@@ -33,8 +33,11 @@
             sidebar.classList.remove('-translate-x-64');
             backdrop.classList.add('opacity-0', 'pointer-events-none');
             open = false;
-        } else if (!open) {
-            sidebar.classList.add('-translate-x-64');
+        } else {
+            if (!open) {
+                closeSidebar(); // reset ook de backdrop netjes
+            }
         }
     });
+
 })();

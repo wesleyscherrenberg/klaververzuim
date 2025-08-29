@@ -7,7 +7,7 @@
 }
 
 .form-control {
-    @apply appearance-none block text-sm w-full h-12 px-4 border
+    @apply appearance-none block text-sm w-full h-11 px-3.5 border
     border-theme-primary bg-white
     focus:border-theme-primary outline-none focus:ring-1 focus:ring-theme-primary
 }

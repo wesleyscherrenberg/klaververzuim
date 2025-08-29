@@ -6,21 +6,20 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class IsAdmin
+class IsSuperAdmin
 {
     /**
      * Handle an incoming request.
      *
-     * @param Closure(Request): (Response) $next
+     * @param  \Closure(Request): (Response)  $next
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if ($request->user() && $request->user()->is_admin) {
+        if ($request->user() && $request->user()->is_admin && $request->user()->is_super_admin) {
             return $next($request);
         }
 
-        return redirect()->route('auth.login')->with('status', 'Uw sessie is verlopen. Log opnieuw in');
-
+        abort(404);
 
     }
 }

@@ -7,8 +7,7 @@
                 <!-- Home Link -->
                 <li class="flex items-center">
                     <a href="{{ route('admin.dashboard.index') }}" class="text-sm inline-flex items-center gap-2 text-theme-gray font-medium underline">
-                        <x-icons.home class="w-4 h-4" />
-                        Dashboard
+                        Home
                     </a>
                 </li>
 

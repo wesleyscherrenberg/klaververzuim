@@ -57,6 +57,24 @@
     }
 
 
+    .panel {
+        @apply bg-gray-100 p-4 text-sm border-l-4 border-theme-primary
+        [&>strong]:flex [&>strong]:items-center [&>strong]:gap-2 [&>strong]:text-base
+        [&>strong>svg]:fill-theme-primary;
+    }
+
+    .panel.panel-success {
+        @apply border-theme-success [&>strong>svg]:fill-theme-success
+    }
+
+    .panel.panel-danger {
+        @apply border-theme-danger [&>strong>svg]:fill-theme-danger
+    }
+
+    .panel.panel-white {
+        @apply bg-white;
+    }
+
 }
 
 

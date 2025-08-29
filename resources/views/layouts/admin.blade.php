@@ -6,10 +6,10 @@
             <div class="h-full flex flex-col space-y-4 py-6 overflow-auto px-4">
                 <div class="mb-6">
                     <div class="text-lg font-semibold text-ellipsis whitespace-nowrap overflow-hidden">
-                        {{ auth()->user()->name ?? 'Jan Jansen' }}
+                        {{ auth()->user()->name }}
                     </div>
                     <div class="text-theme-gray-lighter text-sm whitespace-nowrap overflow-hidden text-ellipsis">
-                        {{ auth()->user()?->is_admin ? 'Beheerder' : 'Hema B.V.'  }}
+                        {{ auth()->user()->is_admin ? 'Beheerder' : auth()->user()->company?->name ?? '-'  }}
                     </div>
                 </div>
 
@@ -20,8 +20,8 @@
                         >Dashboard</a>
                     </li>
                     <li>
-                        <a href="#"
-                           class="sidebar-link {{ Route::is('admin.dashboard.*') ? 'sidebar-link-active' : '' }}"
+                        <a href="{{ route('admin.companies.index') }}"
+                           class="sidebar-link {{ Route::is('admin.companies.*') ? 'sidebar-link-active' : '' }}"
                         >Bedrijven</a>
                     </li>
                     <li>
@@ -37,10 +37,17 @@
                     <li>
                         <a href="#" class="sidebar-link {{ Route::is('admin.dashboard.*') ? 'sidebar-link-active' : '' }}">Rapporten</a>
                     </li>
-                    <li>
-                        <a href="{{ route('admin.styleguide.index') }}"
-                           class="sidebar-link {{ Route::is('admin.styleguide.*') ? 'sidebar-link-active' : '' }}">Styleguide</a>
-                    </li>
+                    @if(auth()->user()->is_super_admin)
+                        <li>
+                            <a href="{{ route('admin.styleguide.index') }}"
+                               class="sidebar-link {{ Route::is('admin.styleguide.*') ? 'sidebar-link-active' : '' }}">Styleguide</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.logs.index') }}"
+                               target="_blank"
+                               class="sidebar-link">Logs</a>
+                        </li>
+                    @endif
                 </ul>
 
                 <form method="POST"
@@ -61,17 +68,27 @@
 
         <!-- Topbar -->
         <div class="flex items-center justify-between gap-3 shadow fixed top-0 left-0 right-0 h-16 px-3 z-10 bg-white transition-transform xl:left-64">
-            <a href="https://klaververzuim.nl" target="_blank" class="font-bold text-xl">
+            <a href="{{route('admin.dashboard.index')}}" target="_blank" class="font-bold text-xl">
                 <img src="{{asset('logo.png')}}" alt="Logo" class="w-36 object-contain" />
             </a>
-            <x-button id="sidebar-toggle" class="btn-primary w-11 h-11 flex-none justify-center lg:hidden">
-                <x-icons.bars class="w-4 h-4 flex-none fill-white" />
-            </x-button>
+            <div class="flex-1 flex justify-end gap-2">
+                <x-button class="btn-white w-11 h-11 flex-none justify-center">
+                    <x-icons.bell class="w-5 h-5 flex-none" />
+                    <span class="absolute block -top-2 -right-2 text-xs text-white bg-theme-danger rounded-full px-1 min-w-5 z-10">2</span>
+                </x-button>
+
+                <x-button id="sidebar-toggle" class="btn-primary w-11 h-11 flex-none justify-center xl:hidden">
+                    <x-icons.bars class="w-4 h-4 flex-none fill-white" />
+                </x-button>
+            </div>
         </div>
 
         <!-- Hoofd-content -->
-        <main class="flex-1 flex flex-col relative my-16 xl:pl-64 container mx-auto">
-            @yield('content')
+        <main class="flex-1 flex flex-col relative my-16 ml-0 xl:ml-64">
+            <div class="container xl:max-w-5xl mx-auto">
+                <x-alert :status="session('status') ?? ''" />
+                @yield('content')
+            </div>
         </main>
 
 @endsection
